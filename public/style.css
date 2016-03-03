@@ -95,16 +95,17 @@ ul {
 
 .chat.page {
   display: none;
+  background: rgba(255,255,255,1);
 }
 
 /* Font */
 
 .messages {
-  font-size: 150%;
+  font-size: 15px;
 }
 
 .inputMessage {
-  font-size: 100%;
+  font-size: 15px;
 }
 
 .log {
@@ -128,28 +129,35 @@ ul {
   padding: 10px 20px 10px 20px;
 }
 
+.message {
+  margin-bottom: 5px;
+}
+
 .message.typing .messageBody {
   color: gray;
 }
 
 .username {
-  float: left;
+  /* float: left; */
   font-weight: 700;
   overflow: hidden;
   padding-right: 15px;
-  text-align: right;
+  text-align: left;
 }
 
 /* Input */
 
 .inputMessage {
-  border: 10px solid #000;
+  border: 5px solid #aaa;
   bottom: 0;
-  height: 60px;
+  height: 150px;
   left: 0;
   outline: none;
   padding-left: 10px;
   position: absolute;
   right: 0;
   width: 100%;
+  font-family: monospace;
 }
+
+pre { margin: 0; }

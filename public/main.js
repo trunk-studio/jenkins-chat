@@ -84,11 +84,11 @@ $(function() {
       $typingMessages.remove();
     }
 
-    var $usernameDiv = $('<span class="username"/>')
+    var $usernameDiv = $('<div class="username"/>')
       .text(data.username)
       .css('color', getUsernameColor(data.username));
-    var $messageBodyDiv = $('<span class="messageBody">')
-      .text(data.message);
+    var $messageBodyDiv = $('<div class="messageBody">')
+      .append($('<pre/>').text(data.message));
 
     var typingClass = data.typing ? 'typing' : '';
     var $messageDiv = $('<li class="message"/>')
@@ -196,14 +196,15 @@ $(function() {
       $currentInput.focus();
     }
     // When the client hits ENTER on their keyboard
-    if (event.which === 13) {
-      if (username) {
+    if (event.which === 13 && !event.shiftKey) {
+      if (username ) {
         sendMessage();
         socket.emit('stop typing');
         typing = false;
       } else {
         setUsername();
       }
+      return false;
     }
   });
 
