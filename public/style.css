@@ -49,7 +49,7 @@ ul {
 /* Login Page */
 
 .login.page {
-  background-color: #000;
+  background-color: rgba(0,0,0,.3);
 }
 
 .login.page .form {
@@ -73,7 +73,11 @@ ul {
 }
 
 .login.page .title {
+  font-family: Helvetica;
+  font-weight: bold;
   font-size: 200%;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .login.page .usernameInput {
@@ -81,7 +85,8 @@ ul {
   letter-spacing: 3px;
 }
 
-.login.page .title, .login.page .usernameInput {
+/* .login.page .title, */
+.login.page .usernameInput {
   color: #fff;
   font-weight: 100;
 }
